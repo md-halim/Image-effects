@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+header h1 {
+    text-align: center;
+}
+header h1 span {
+    color: blueviolet;
+}
+.box{
+  width: 350px;
+  margin: 10px auto;
+  position: relative;
+}
+.box img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 5px #bab;
+    overflow: hidden;
+    display: block;
+    transform: scale(1);
+    transition: all .5s;
+}
+.box:hover img{
+    transform: scale(1.05);
+}
+.box .box-content {
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    width: 100%;
+    color: #fff;
+}
+.box .name,
+.box .post {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+    margin: 0;
+    opacity: 1;
+    transition: all .5s;  
+}
+.box .post,
+.box:hover .name {
+    opacity: 0;
+    transition: all .5s;
+    
+}
+.box:hover .post{
+    opacity: 1;
+}
+/* Border effect  */
+.box:before,
+.box:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    transition: all .5s;
+}
+.box:before{
+    bottom: 5%;
+    left: 5%;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+}
+.box:after{
+    top: 4.4%;
+    right: 4.4%;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+.box:hover:before,
+.box:hover:after {
+   opacity: 1;
+   width: 90%;
+   height:90%;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,88 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+header h1 {
+    text-align: center;
+}
+header h1 span{
+    color: red;
+}
+.box {
+    width: 400px;
+    border: 2px solid #ccc;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.box-img{
+    display: block;
+   
+}
+.box-img img {
+    width: 100%;
+    height: auto;
+}
+.box-img:before,
+.box-img:after,
+.box-img .over-lay:before,
+.box-img .over-lay:after{
+    content: "";
+    width: 50%;
+    height: 50%;
+    position:absolute;
+    background:rgba(255, 255, 255, 0.2);
+    transition: all .4s ease-in-out 0s;
+}
+.box .box-img:before{
+    left: -100%;
+    top: 0;
+}
+.box:hover .box-img:before{
+    left: 0;
+}
+.box .box-img:after{
+    right: 0%;
+    top: -100%;
+    background:rgba(255, 255, 255, 0.6);
+}
+.box:hover .box-img:after{
+     top: 0%;
+}
+.over-lay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+}
+.box-img .over-lay:before {
+    left:0;
+    bottom: -100%;
+    background:rgba(255, 255, 255, 0.6);
+}
+.box:hover .over-lay:before {
+    bottom:0%;
+}
+.box-img .over-lay:after {
+    right:-100%;
+    bottom:0%;
+}
+.box:hover .over-lay:after {
+   right: 0%;
+}
+.box .over-lay i{
+    position: relative;
+    top: 45%;
+    left:1%;
+    font-size: 35px;
+    color: red;
+    z-index: 1;
+    opacity: 0;
+    transition: all .4s ease-in-out 0.1s;
+}
+.box:hover .over-lay i{
+    opacity: 1;
+    transition-delay: 0.1s;
+}

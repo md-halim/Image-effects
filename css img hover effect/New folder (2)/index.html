@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover effect</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-align: center;
+        }
+        .img_effect{
+            margin: auto;
+            width: 500px;
+            border: 2px solid rgba(111, 223, 255, .8);
+            position: relative;
+            overflow: hidden;
+            }
+        .img_effect img{
+            width: 100%;
+            height: auto;
+        }
+        .overlay{
+           
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            height: 100%;
+            transition: .5s;
+            text-align: center;
+            color: #fff;
+        }
+        .overlay p {
+            padding: 20px;
+        }
+        .img_effect:hover .overlay{
+            left: 0;
+            
+        }
+
+    </style>
+    
+</head>
+<body>
+    <h1>Sliding Caption image</h1>
+    <div class="img_effect">
+        <img src="img/mishaal-zahed-KrH7BW73OGw-unsplash.jpg" alt="">
+        <div class="overlay">
+            <h2>Lunce Interval</h2>
+            <p>Please waiting for me I will back soonn
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam consequuntur itaque totam tenetur praesentium, unde beatae adipisci recusandae aspernatur? Maiores sed sit minima, consequuntur dolorum atque alias autem in nostrum.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid excepturi veniam deleniti harum doloribus cum mollitia minus neque officia accusantium, sed eaque suscipit sequi exercitationem, debitis autem id libero minima.</p>
+        </div>
+    </div>
+</body>
+</html>
